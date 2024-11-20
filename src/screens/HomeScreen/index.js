@@ -87,7 +87,7 @@ const HomeScreen = ({ route, navigation }) => {
         <View style={[styles.container, { paddingTop: insets.top }]}>
             <Text style={styles.quizHeader}>Math Quiz Question</Text>
             <QuizProgress numberOfPlays={numberOfPlays} numberOfQuestions={numberOfQuestions}/>
-            <Text style={styles.timer}>Timer in {timer}</Text>
+            <Text style={styles.timer}>Timer in {clockTimer}</Text>
             <View style={styles.questionBox}>
                 <Text style={styles.questionText}>{`${question.number1} ${question.randomOperator} ${question.number2} = ?`}</Text>
             </View>
