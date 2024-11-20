@@ -13,21 +13,21 @@ const HomeScreen = ({ route, navigation }) => {
     const [wrongAnswers, setWrongAnswers] = useState([]);
     const [score, setScore] = useState(0);
     const [numberOfPlays, setNumberOfPlays] = useState(0);
-    const [timer, setTimer] = useState(0);
+    const [clockTimer, setClockTimer] = useState(0);
     const operator = ['+', '-', '*', '/'];
 
     const handleTimer = () => {
-        setTimer(30);
+        setClockTimer(30);
     };
 
     useEffect(()=>{
-        if(timer>0){
+        if(clockTimer>0){
             const countdown=setInterval(()=>{
-                setTimer((prevTimer)=>prevTimer-1);
+                setClockTimer((prevTimer)=>prevTimer-1);
             },1000);
             return()=>clearInterval(countdown);
         }
-    },[timer]);
+    },[clockTimer]);
 
     useEffect(() => {
         startFreshQuestion()
